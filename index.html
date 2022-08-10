@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/static/img/favicon@96x96.png" type="image/png">
+    <link rel="apple-touch-icon" href="/static/img/favicon@256x256.png">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="google" value="notranslate">
+    <meta name="full-screen" content="yes">
+    <meta name="layoutmode" content="fitscreen">
+    <meta name="browsermode" content="application">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-title" content="YosakuraTohu的小屋">
+
+    <link href="https://fonts.googleapis.cn/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"
+        media="none" onload="this.media='all'">
+
+    <link rel="stylesheet" href="./static/css/normalize.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="./static/css/skeleton.css" media="none" onload="this.media='all'">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <title>Test</title>
+</head>
+
+<body id="root">
+</body>
+<script>
+    navigator.serviceWorker.register('sw.js').then(() => {
+        console.info('注册成功')
+    }).catch((err) => {
+        console.error('注册失败')
+    })
+</script>
+<script src="./static/js/localforage.min.js"></script>
+<script src="./dist/bundle.js" async></script>
+
+</html>

@@ -1,0 +1,67 @@
+:root {
+    --sk-color: plum;
+    --sk-size: 100px;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    padding:
+        env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* background-image: url(./100055563_p0.jpg) !important; */
+    background: url(https://www.dmoe.cc/random.php) center 0 no-repeat !important;
+    background-size: cover !important;
+}
+
+span::before {
+    content: attr(data-content);
+}
+
+#titleBar {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+    border-radius: 10px;
+
+    margin-top: 200px;
+    z-index: 100;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
+}
+
+#titleBar button {
+    margin: 0;
+}
+
+#titleBar::before {
+    content: attr(data);
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -200px;
+    left: 0px;
+    padding-top: 2ch;
+
+    font-size: 6ch;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+#mainContent {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 10px !important;
+    border-radius: 10px;
+}
